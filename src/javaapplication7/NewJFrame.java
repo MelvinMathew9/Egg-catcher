@@ -146,18 +146,23 @@ int b=0,i=0,sc=1,n=1,a=1;
              break;
      }
    
-     if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==8){
+      java.util.Timer t = new java.util.Timer();
+t.schedule(new TimerTask() {
+
+            @Override
+            public void run() {
+                 if(b==8){
      e1.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=0;
      e333.setIcon(new ImageIcon(""));
      
      }
-     else if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==0){
+     else if(b==0){
      e11.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=1;
      e1.setIcon(new ImageIcon(""));
      e1.setIcon(new ImageIcon(""));}
-     else if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==1){e11.setIcon(new ImageIcon(""));
+     else if(b==1){e11.setIcon(new ImageIcon(""));
      e111.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=2; 
      if(i!=0){
@@ -167,16 +172,16 @@ int b=0,i=0,sc=1,n=1,a=1;
      else if(i==0){
          score.setText((sc++) + "");
      }}
-     else if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==2){
+     else if(b==2){
      e2.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=3;
      e111.setIcon(new ImageIcon(""));}
-     else if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==3){
+     else if(b==3){
      e22.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=4;
      e2.setIcon(new ImageIcon(""));}
      
-     else if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==4){e22.setIcon(new ImageIcon(""));
+     else if(b==4){e22.setIcon(new ImageIcon(""));
      e222.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=5; 
      if(i!=1){
@@ -187,16 +192,16 @@ int b=0,i=0,sc=1,n=1,a=1;
      else if(i==1){
          score.setText((sc++) + "");
      }}
-     else if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==5){
+     else if(b==5){
      e3.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=6;
      e222.setIcon(new ImageIcon(""));}
-     else if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==6){
+     else if(b==6){
      e33.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=7;
      e3.setIcon(new ImageIcon(""));}
      
-     else if(evt.getKeyCode() == KeyEvent.VK_CONTROL && b==7){e33.setIcon(new ImageIcon(""));
+     else if(b==7){e33.setIcon(new ImageIcon(""));
      e333.setIcon(new ImageIcon("C:\\Users\\Melvin Mathew\\Documents\\NetBeansProjects\\JavaApplication5\\src\\javaapplication5\\pa.png"));
      b=8; 
      if(i!=2){
@@ -206,7 +211,9 @@ int b=0,i=0,sc=1,n=1,a=1;
      else if(i==2){
          score.setText((sc++ ) + "");
      }}
-     
+
+            }
+        }, 5000,5000);
      
      
          
